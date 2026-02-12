@@ -23,8 +23,8 @@ MODELS_DIR = BASE / "models"
 
 # TODO: replace these with your real URLs
 MODEL_URLS = {
-    "mood4_model": "https://drive.google.com/uc?export=download&id=1ky23-XrfHXg7Kd87XGvzCZQxC2HiW_hn" ,
-    "risk_model": "https://drive.google.com/uc?export=download&id=1duHGX6Jeb_ZD2trB4gOx5tOP3BqatxGi",
+    "mood4_model": "https://drive.usercontent.google.com/download?id=1ky23-XrfHXg7Kd87XGvzCZQxC2HiW_hn&export=download&authuser=1&confirm=t&uuid=dc86f872-fc39-4030-baf2-e1b0a94c373c&at=APcXIO3x7aK6q67RImaYXtvkm6-n:1770888584228" ,
+    "risk_model": "https://drive.usercontent.google.com/download?id=1duHGX6Jeb_ZD2trB4gOx5tOP3BqatxGi&export=download&authuser=1&confirm=t&uuid=7d18dac7-7823-4c14-bcdf-16e7de4502d9&at=APcXIO3bFRZUawKbzH7hOfns7vW2:1770888616138",
 }
 
 
