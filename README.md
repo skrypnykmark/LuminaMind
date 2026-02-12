@@ -70,6 +70,19 @@ npm run dev
 
 Starts all three services: ML (port 8000), backend (3001), frontend (5173).
 
+Note: The command used to run the ML server depends on how Python is installed on your machine.
+
+- On macOS/Linux, you might use:
+  ```bash
+  PYTHONPATH=. uvicorn ml.main:app --host 0.0.0.0 --port 8000 --reload
+  ```
+- In this repo, the default `dev:ml` script assumes Python is available as `python`:
+  ```json
+  "dev:ml": "cd ml && python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+  ```
+
+If `npm run dev:ml` fails because `python` is not found, change `python` in the script above to whatever works on your system (e.g. `python3` or `py`).
+
 ## ML Models
 
 Two-stage classification pipeline:
@@ -80,6 +93,22 @@ Two-stage classification pipeline:
 Combined output: primary label (Suicidal if risk ≥ 0.5, else top mood) plus scores for all categories.
 
 **Note:** Model files (~1.4GB) are excluded from the repo (GitHub 100MB limit). Place the trained models in `models/mood4_model/` and `models/risk_model/` to run the ML service.
+
+### Downloading models for collaborators
+
+Because the models are large, they have been uploaded to my drive.
+
+collaborators can run:
+
+```bash
+cd ml
+python download_models.py
+```
+
+This will download and unpack the zips into:
+
+- `models/mood4_model/`
+- `models/risk_model/`
 
 ## Project Structure
 
